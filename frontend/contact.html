@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - J.D. Computer Education</title>
+  <meta name="description" content="Contact J.D. Computer Education for course inquiries and admissions">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/newstyle.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/animation.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="images/logo.png" type="image/png">
+</head>
+<body>
+
+<header>
+  <div class="header-container">
+    <div class="logo">
+      <img src="images/logo.png" alt="JD Computer Education" width="60" height="60">
+      <div>
+        <h1>J.D. COMPUTER EDUCATION</h1>
+        <p>Under J.D. Educational Welfare Society</p>
+      </div>
+    </div>
+    <nav>
+      <ul id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+      <div class="mobile-menu" id="mobile-menu-btn" aria-label="Mobile menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="page-banner">
+  <div class="container">
+    <h1>Contact Us</h1>
+    <p>Get in touch for admissions or inquiries</p>
+  </div>
+</section>
+
+<section class="contact-page">
+  <div class="container">
+    <div class="contact-container">
+      <div class="contact-info">
+        <h2>Our Location</h2>
+        <div class="contact-details">
+          <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> J.D. Palaza First Floor, Front of Roadways, Hussainabad, Jaunpur 222002</p>
+          <p><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:8052691686">8052691686</a>, <a href="tel:9984744090">9984744090</a></p>
+          <p><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:amitgiri99353@gmail.com">amitgiri99353@gmail.com</a></p>
+          <p><i class="fas fa-clock" aria-hidden="true"></i> Monday-Saturday: 9:00 AM - 6:00 PM</p>
+        </div>
+
+         <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3561.305935058832!2d82.68742!3d25.740245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDQ0JzI0LjkiTiA4MsKwNDEnMTQuNyJF!5e0!3m2!1sen!2sin!4v1715600000000"
+            width="100%"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Google Maps location of J.D. Computer Education"
+            aria-label="Google Maps location of J.D. Computer Education">
+          </iframe>
+        </div>
+      </div>
+
+      <div class="contact-form-container">
+        <h2>Send Us a Message</h2>
+        <form id="contactForm" class="contact-form" novalidate>
+          <div class="form-group">
+            <label for="name">Full Name <span class="required">*</span></label>
+            <input 
+              type="text" 
+              id="name" 
+              name="name" 
+              required 
+              minlength="3"
+              aria-required="true"
+              placeholder="Enter your full name"
+            >
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email <span class="required">*</span></label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              required
+              aria-required="true"
+              placeholder="Enter your email address"
+            >
+          </div>
+          
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input 
+              type="tel" 
+              id="phone" 
+              name="phone" 
+              pattern="[0-9]{10}"
+              placeholder="Enter 10-digit phone number"
+              aria-describedby="phoneHelp"
+            >
+            <small id="phoneHelp" class="form-hint">Format: 10 digits (no spaces or dashes)</small>
+          </div>
+          
+          <div class="form-group">
+            <label for="course_completed">Course Completed</label>
+            <select id="course_completed" name="course_completed">
+              <option value="">Select a course</option>
+              <option value="10">10th</option>
+              <option value="12">12th</option>
+              <option value="UG">UG</option>
+              <option value="PG">PG</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="course_interested">Course Interested In</label>
+            <select id="course_interested" name="course_interested">
+              <option value="">Select a course</option>
+              <option value="O Level">"O" Level Foundation</option>
+              <option value="ADCA">ADCA</option>
+              <option value="DCA">DCA</option>
+              <option value="PGDCA">PGDCA</option>
+              <option value="Typing">Typing Course</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Your Message <span class="required">*</span></label>
+            <textarea 
+              id="message" 
+              name="message" 
+              rows="5" 
+              required 
+              minlength="10"
+              aria-required="true"
+              placeholder="Enter your message here..."
+            ></textarea>
+          </div>
+
+          <div id="formStatus" class="form-status" role="alert" aria-live="polite"></div>
+
+          <button type="submit" class="btn-primary">
+            <span class="btn-text">Send Message</span>
+            <i class="fas fa-paper-plane" aria-hidden="true"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<a href="https://wa.me/918052691686" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <h3>J.D. Computer Education</h3>
+        <p>Under J.D. Educational Welfare Society Hussainabad, Jaunpur 222002 (NIELIT के पाठ्यक्रमानुसार)</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-courses">
+        <h3>Our Courses</h3>
+        <ul>
+          <li><a href="courses.html#olevel">"O" Level</a></li>
+          <li><a href="courses.html#adca">ADCA/DCA/PGDCA</a></li>
+          <li><a href="courses.html#dlc">DLC Courses</a></li>
+          <li><a href="courses.html#basic">Basic Computer</a></li>
+          <li><a href="courses.html#typing">Typing Courses</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <ul>
+          <li><i class="fas fa-map-marker-alt"></i> J.D. Palaza First Floor, Front of Roadways, Hussainabad, Jaunpur 222002</li>
+          <li><i class="fas fa-phone"></i> <a href="tel:8052691686">8052691686</a>, <a href="tel:9984744090">9984744090</a></li>
+          <li><i class="fas fa-envelope"></i> <a href="mailto:amitgiri99353@gmail.com">amitgiri99353@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="current-year">2023</span> J.D. Computer Education. All Rights Reserved.</p>
+      <p>Designed with <i class="fas fa-heart" aria-hidden="true"></i> for quality education</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="js/contact-Form.js"></script>
+<script src="js/animation.js"></script>
+<script>
+  // Update current year in footer
+  document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

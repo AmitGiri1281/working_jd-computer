@@ -7,7 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const passwordInput = document.getElementById('password');
 
   // Configuration
-  const API_BASE_URL = 'http://localhost:5000'; // Your backend server URL
+  // Configuration
+const API_BASE_URL = 'https://working-jd-computer.onrender.com'; // Deployed backend URL
+
   const DASHBOARD_URL = 'admin-dashboard.html'; // Your dashboard page
   const TOKEN_KEY = 'adminToken'; // LocalStorage key for token
 

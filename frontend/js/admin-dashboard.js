@@ -9,7 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const confirmDeleteBtn = document.getElementById('confirmDelete');
   
   // Configuration
-  const API_URL = 'http://localhost:5000/api/contacts';
+ const API_URL = 'https://working-jd-computer.onrender.com/api/contacts';
+
   const TOKEN_KEY = 'adminToken';
   let currentPage = 1;
   const itemsPerPage = 10;

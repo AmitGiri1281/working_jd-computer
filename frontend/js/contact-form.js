@@ -3,7 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!contactForm) return;
 
   // Use absolute URL to your backend
-  const API_URL = 'http://localhost:5000/api/contacts';
+ const API_URL = 'https://working-jd-computer.onrender.com/api/contacts';
+
 
   // Remove any existing listeners to prevent duplicates
   contactForm.replaceWith(contactForm.cloneNode(true));

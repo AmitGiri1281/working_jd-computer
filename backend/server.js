@@ -19,7 +19,9 @@ const allowedOrigins = [
   'http://127.0.0.1:5500',
   'http://localhost:5500',
   'http://localhost:3000',
-  'https://working-jd-computer.vercel.app'
+  'https://working-jd-computer.vercel.app',
+  'https://www.jdcomputereducation.com', // ✅ Add this
+  'https://jdcomputereducation.com'       // ✅ Add non-www too
 ];
 
 app.use(cors({

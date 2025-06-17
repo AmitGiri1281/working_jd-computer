@@ -9,11 +9,5 @@
         }
       ]
     }
-  ],
-  "rewrites": [
-    {
-      "source": "/sitemap.xml",
-      "destination": "/frontend/sitemap.xml" // Point to actual file location
-    }
   ]
 }

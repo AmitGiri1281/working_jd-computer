@@ -290,27 +290,151 @@
     <a href="https://wa.me/918052691686" class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
-  <script type="application/ld+json">
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "EducationalOrganization",
-  "name": "J.D. Computer Education",
-  "url": "https://jdcomputereducation.com",
-  "logo": "https://jdcomputereducation.com/images/logo.png",
-  "description": "Best Computer Classes in Jaunpur including CCC, DCA, ADCA, Tally, Typing and more.",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "J.D. Plaza, First Floor, Front of Roadways, Hussainabad",
-    "addressLocality": "Jaunpur",
-    "addressRegion": "Uttar Pradesh",
-    "postalCode": "222002",
-    "addressCountry": "IN"
-  },
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+91-8052691686",
-    "contactType": "Customer Service"
-  }
+  "@graph": [
+    {
+      "@type": "EducationalOrganization",
+      "@id": "https://jdcomputereducation.com/#organization",
+      "name": "J.D. Computer Education",
+      "url": "https://jdcomputereducation.com",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://jdcomputereducation.com/#logo",
+        "url": "https://jdcomputereducation.com/images/logo.png",
+        "width": "300",
+        "height": "100",
+        "caption": "JD Computer Education Jaunpur"
+      },
+      "description": "NIELIT-affiliated computer training institute in Jaunpur offering DCA, ADCA, 'O' Level, Tally, and typing courses with 100% placement support.",
+      "foundingDate": "2015",  // Add your establishment year
+      "founder": {
+        "@type": "Person",
+        "name": "Your Founder's Name"  // Add founder details
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "J.D. Plaza, First Floor, Front of Roadways",
+        "addressLocality": "Hussainabad",
+        "addressRegion": "Jaunpur, Uttar Pradesh",
+        "postalCode": "222002",
+        "addressCountry": "IN",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "25.7329",  // Add your exact coordinates
+          "longitude": "82.6883"
+        }
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+918052691686",
+          "contactType": "Admissions",
+          "areaServed": ["IN"],
+          "availableLanguage": ["Hindi", "English"]
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+919984744090",
+          "contactType": "Placement Cell"
+        }
+      ],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "08:00",
+        "closes": "20:00"
+      },
+      "priceRange": "₹₹",  // Indicating mid-range pricing
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Computer Courses",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Course",
+              "name": "O Level Foundation",
+              "description": "1-year NIELIT accredited course covering IT fundamentals, programming, and applications",
+              "provider": {
+                "@type": "Organization",
+                "name": "NIELIT"
+              },
+              "timeToComplete": "P1Y",  // ISO 8601 duration format (1 year)
+              "educationalCredentialAwarded": "O Level Certificate",
+              "occupationalCredentialAwarded": "Programmer"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Course",
+              "name": "Advanced Diploma in Computer Applications (ADCA)",
+              "description": "12-month professional course covering Tally, DTP, Web Design, and Programming",
+              "hasCourseInstance": {
+                "@type": "CourseInstance",
+                "courseMode": ["Onsite", "Offline"],
+                "courseWorkload": "P6M"  // 6 months
+              }
+            }
+          }
+        ]
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",  // Add your actual rating
+        "reviewCount": "127",  // Update with real count
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "sameAs": [
+        "https://www.facebook.com/yourpage",
+        "https://www.instagram.com/yourprofile",
+        "https://www.linkedin.com/company/yourprofile"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://jdcomputereducation.com/#website",
+      "url": "https://jdcomputereducation.com",
+      "name": "JD Computer Education Jaunpur",
+      "description": "Best computer training institute in Jaunpur for NIELIT courses with placement support",
+      "publisher": {
+        "@id": "https://jdcomputereducation.com/#organization"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://jdcomputereducation.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://jdcomputereducation.com/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://jdcomputereducation.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Courses",
+          "item": "https://jdcomputereducation.com/courses"
+        }
+      ]
+    }
+  ]
 }
 </script>
 

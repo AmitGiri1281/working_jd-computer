@@ -13,7 +13,7 @@
   "rewrites": [
     {
       "source": "/sitemap.xml",
-      "destination": "/sitemap.xml" // Changed from /frontend/sitemap.xml
+      "destination": "/frontend/sitemap.xml" // Point to actual file location
     }
   ]
 }

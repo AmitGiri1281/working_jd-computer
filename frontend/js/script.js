@@ -304,13 +304,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (!popup) return;
 
-    // Show popup only once
-    if (!localStorage.getItem("videoShown")) {
-        popup.style.display = "flex";
-        localStorage.setItem("videoShown", "true");
-    } else {
-        popup.style.display = "none";
-    }
+    
+   // Always show popup
+popup.style.display = "flex";
 
     // Close Function
     function closeVideo() {

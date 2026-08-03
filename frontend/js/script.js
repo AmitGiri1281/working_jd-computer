@@ -292,78 +292,47 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+// ===============================
+// VIDEO POPUP CODE
+// ===============================
 
-// add popup form
-// Show the pop-up after the page loads
-window.onload = function() {
-  setTimeout(function() {
-    document.getElementById('popup-overlay').style.display = 'flex';
-  }, 2000); // Show after 2 seconds (you can adjust this time)
-};
+document.addEventListener("DOMContentLoaded", function () {
 
-// Close the pop-up when clicking the close button
-document.getElementById('close-btn').addEventListener('click', function() {
-  document.getElementById('popup-overlay').style.display = 'none';
-});
+    const popup = document.getElementById("videoPopup");
+    const closeBtn = document.querySelector(".close-video");
+    const video = document.getElementById("promoVideo");
 
+    if (!popup) return;
 
-
-
-document.addEventListener('DOMContentLoaded', () => {
-  const form = document.getElementById('contactForm');
-
-  if (!form) {
-    console.warn("⚠️ contactForm not found in DOM.");
-    return;
-  }
-
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-
-    const formData = {
-      name: form.name.value.trim(),
-      email: form.email.value.trim(),
-      phone: form.phone.value.trim(),
-      courseCompleted: form.courseCompleted.value,
-      courseInterested: form.courseInterested.value,
-      message: form.message.value.trim()
-    };
-
-    try {
-      const response = await fetch('http://localhost:5000/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      });
-      const result = await response.json();
-      alert(result.message);
-      form.reset();
-    } catch (error) {
-      alert('Failed to send message.');
-      console.error(error);
+    // Show popup only once
+    if (!localStorage.getItem("videoShown")) {
+        popup.style.display = "flex";
+        localStorage.setItem("videoShown", "true");
+    } else {
+        popup.style.display = "none";
     }
-  });
-});
 
+    // Close Function
+    function closeVideo() {
+        if (video) {
+            video.pause();
+            video.currentTime = 0;
+        }
 
-document.getElementById('contactForm').addEventListener('submit', async function (e) {
-  e.preventDefault();
+        popup.style.display = "none";
+    }
 
-  const data = {
-    name: document.getElementById('name').value,
-    email: document.getElementById('email').value,
-    phone: document.getElementById('phone').value,
-    courseCompleted: document.getElementById('course-completed').value,
-    courseInterested: document.getElementById('course-interested').value,
-    message: document.getElementById('message').value
-  };
+    // Make function available for HTML onclick
+    window.closeVideo = closeVideo;
 
-  const response = await fetch('http://localhost:3000/contact', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(data)
-  });
+    // Close button (X)
+    if (closeBtn) {
+        closeBtn.addEventListener("click", closeVideo);
+    }
 
-  const result = await response.text();
-  alert(result);
+    // Auto close after video ends
+    if (video) {
+        video.addEventListener("ended", closeVideo);
+    }
+
 });
